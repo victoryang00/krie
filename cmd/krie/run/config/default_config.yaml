@@ -5,7 +5,6 @@ log_level: debug
 output: "/tmp/krie.json"
 
 ## BTF information for the current kernel in .tar.xz format (required only if KRIE isn't able to locate it by itself)
-vmlinux: ""
 
 ## events configuration
 events:

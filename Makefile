@@ -17,6 +17,7 @@ build-ebpf-no-wrapper:
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include \
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include/uapi \
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include/generated \
+		-I/usr/include/x86_64-linux-gnu/ \
 		-c -O2 -g -target bpf \
 		ebpf/main.c \
 		-o ebpf/bin/probe.o
@@ -36,6 +37,7 @@ build-ebpf-syscall-wrapper:
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include \
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include/uapi \
 		-I/lib/modules/$$(uname -r)/build/arch/x86/include/generated \
+		-I/usr/include/x86_64-linux-gnu/ \
 		-c -O2 -g -target bpf \
 		ebpf/main.c \
 		-o ebpf/bin/probe_syscall_wrapper.o
